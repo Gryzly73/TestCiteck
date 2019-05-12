@@ -20,6 +20,7 @@ public class Main {
 
         //третье, число - int, без проверки ввода
         System.out.println(third(9007280));
+        System.out.println(third(-9007285));
     }
 
     private static Set<Map.Entry<Integer, Integer>>  first(List<Integer> integerList){
@@ -68,7 +69,8 @@ public class Main {
         int index = stringBuilder.reverse().indexOf("0");
         if(index >= 0){
             double pow = Math.pow(10, index);
-           return number + (int)pow;
+        return number >= 0 ? number + (int) pow : number - (int) pow;
+         //  return number + (int)pow;
         }
         return number;
     }
